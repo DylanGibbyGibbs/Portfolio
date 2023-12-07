@@ -1,0 +1,9 @@
+Big Dawg Adventures is the capstone project of a two semester long software engineering course at Western Illinois University.
+It was the collaborative effort of Dylan Gibbs, Jason Strack, and Lawson Meredith. 
+This game has been coded entirely in Java, using RyiSno's RPG series as a jumping off point.
+
+The game itself is an RPG inspired by the original Legend of Zelda. 
+It has an overworld, dungeons, and submaps to explore.
+It has different items to change the style of play.
+
+Fight Slimes, Robo-Dogs, and The monsterous Cyber-Cat to save the town!
