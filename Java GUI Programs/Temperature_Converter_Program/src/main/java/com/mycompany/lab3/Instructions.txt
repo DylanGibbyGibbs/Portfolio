@@ -1,0 +1,10 @@
+This temperature converter was made by Dylan Gibbs
+
+To use my temperature converter simply run the lab3 java file.
+
+This temperature converter is capable of using negatives and decimal point values. 
+
+It will not accept non digits except for a single - and a single . 
+
+If you wish to clear your results then use the button on the right side that says clear.
+
