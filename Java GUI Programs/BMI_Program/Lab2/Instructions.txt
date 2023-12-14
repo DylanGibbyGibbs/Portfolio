@@ -1,0 +1,12 @@
+Running the lab2 java file will start the windowed program. 
+
+This BMI calculator will take:
+Any weight up to 4 digits
+Any height in inches up to 2 digits
+Any height in feet up to 1 digit.
+
+This satisfies the overwhelming majority of humans.
+
+The program will not accept non digits.
+
+Simply plug in your values in the boxes and hit the button.
