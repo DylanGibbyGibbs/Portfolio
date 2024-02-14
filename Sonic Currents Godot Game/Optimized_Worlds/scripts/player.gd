@@ -15,6 +15,7 @@ func _physics_process(delta):
 	player_movement(delta)
 	enemy_attack()
 	attack()
+	current_camera()
 	
 	if health <= 0:
 		player_alive = false #this is where you deal with game overs
@@ -128,7 +129,14 @@ func attack():
 			$AnimatedSprite2D.play("down_attack")
 			$deal_attack_timer.start()
 
-
+func current_camera():
+	if global.current_scene == "world":
+		$world_camera.enabled = true
+		$cliff_side_camera.enabled = false
+	elif global.current_scene == "cliff_side":
+		$cliff_side_camera.enabled = true
+		$world_camera.enabled = false
+		
 
 func _on_deal_attack_timer_timeout():
 	$deal_attack_timer.stop()

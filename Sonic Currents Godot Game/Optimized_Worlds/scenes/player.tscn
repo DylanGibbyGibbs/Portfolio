@@ -172,7 +172,7 @@ wait_time = 3.0
 [node name="deal_attack_timer" type="Timer" parent="."]
 wait_time = 0.5
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="world_camera" type="Camera2D" parent="."]
 limit_left = 0
 limit_top = 0
 limit_right = 736
@@ -181,6 +181,12 @@ limit_smoothed = true
 rotation_smoothing_enabled = true
 drag_horizontal_enabled = true
 drag_vertical_enabled = true
+
+[node name="cliff_side_camera" type="Camera2D" parent="."]
+limit_left = 0
+limit_top = 0
+limit_right = 736
+limit_bottom = 396
 
 [connection signal="body_entered" from="player_hitbox" to="." method="_on_player_hitbox_body_entered"]
 [connection signal="body_exited" from="player_hitbox" to="." method="_on_player_hitbox_body_exited"]
