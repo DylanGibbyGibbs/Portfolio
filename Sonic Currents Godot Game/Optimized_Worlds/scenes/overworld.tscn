@@ -1,0 +1,107 @@
+[gd_scene load_steps=18 format=3 uid="uid://glxoemruag1p"]
+
+[ext_resource type="Script" path="res://scripts/cliff_side.gd" id="1_kc8lm"]
+[ext_resource type="Texture2D" uid="uid://dy2nuty6ykota" path="res://art/Exteriors/1_Terrains_and_Fences_32x32.png" id="2_67s6y"]
+[ext_resource type="Texture2D" uid="uid://c512rdaikc01t" path="res://art/Exteriors/2_City_Terrains_32x32.png" id="3_mjnf4"]
+[ext_resource type="Texture2D" uid="uid://btj45w3tom7ae" path="res://art/Exteriors/4_Generic_Buildings_32x32.png" id="4_vo1e6"]
+[ext_resource type="Texture2D" uid="uid://3e1w2ulqlmkt" path="res://art/Exteriors/5_Floor_Modular_Buildings_32x32.png" id="5_xm05t"]
+[ext_resource type="PackedScene" uid="uid://phgwe6ksmace" path="res://scenes/player.tscn" id="6_dvw56"]
+[ext_resource type="Texture2D" uid="uid://6el8dr08xal5" path="res://art/Exteriors/6_Garage_Sales_32x32.png" id="6_umgls"]
+[ext_resource type="Texture2D" uid="uid://ccokhs1kxqwr7" path="res://art/Exteriors/9_Shopping_Center_and_Markets_32x32.png" id="7_nxyqg"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_2u7bv"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6186o"]
+texture = ExtResource("2_67s6y")
+texture_region_size = Vector2i(32, 32)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jm8p5"]
+texture = ExtResource("3_mjnf4")
+texture_region_size = Vector2i(32, 32)
+51:20/0 = 0
+51:20/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+51:20/0/physics_layer_0/angular_velocity = 0.0
+51:19/0 = 0
+51:19/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+51:19/0/physics_layer_0/angular_velocity = 0.0
+51:18/0 = 0
+51:18/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+51:18/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bpaq2"]
+texture = ExtResource("4_vo1e6")
+texture_region_size = Vector2i(32, 32)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_l525s"]
+texture = ExtResource("5_xm05t")
+texture_region_size = Vector2i(32, 32)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iu4pp"]
+texture = ExtResource("6_umgls")
+texture_region_size = Vector2i(32, 32)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sy7ix"]
+texture = ExtResource("7_nxyqg")
+texture_region_size = Vector2i(32, 32)
+
+[sub_resource type="TileSet" id="TileSet_i25is"]
+tile_size = Vector2i(32, 32)
+physics_layer_0/collision_layer = 1
+physics_layer_0/physics_material = SubResource("PhysicsMaterial_2u7bv")
+sources/1 = SubResource("TileSetAtlasSource_6186o")
+sources/2 = SubResource("TileSetAtlasSource_jm8p5")
+sources/3 = SubResource("TileSetAtlasSource_bpaq2")
+sources/4 = SubResource("TileSetAtlasSource_l525s")
+sources/5 = SubResource("TileSetAtlasSource_iu4pp")
+sources/6 = SubResource("TileSetAtlasSource_sy7ix")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wt6oy"]
+size = Vector2(63.75, 45.75)
+
+[node name="cliff_side" type="Node2D"]
+y_sort_enabled = true
+script = ExtResource("1_kc8lm")
+
+[node name="TileMap" type="TileMap" parent="."]
+y_sort_enabled = true
+position = Vector2(32, 0)
+tile_set = SubResource("TileSet_i25is")
+format = 2
+layer_0/name = "Level 0 (Base)"
+layer_0/tile_data = PackedInt32Array(65535, 3342338, 18, 131071, 3342338, 19, 196607, 3342338, 20, 0, 3342338, 18, 65536, 3342338, 19, 131072, 3342338, 20, 1, 3342338, 18, 65537, 3342338, 19, 131073, 3342338, 20, 2, 3342338, 18, 65538, 3342338, 19, 131074, 3342338, 20, 3, 3342338, 18, 65539, 3342338, 19, 131075, 3342338, 20, 4, 3342338, 18, 65540, 3342338, 19, 131076, 3342338, 20, 5, 3342338, 18, 65541, 3342338, 19, 131077, 3342338, 20, 6, 3342338, 18, 65542, 3342338, 19, 131078, 3342338, 20, 7, 3342338, 18, 65543, 3342338, 19, 131079, 3342338, 20, 8, 3342338, 18, 65544, 3342338, 19, 131080, 3342338, 20, 9, 3342338, 18, 65545, 3342338, 19, 131081, 3342338, 20, 10, 3342338, 18, 65546, 3342338, 19, 131082, 3342338, 20, 11, 3342338, 18, 65547, 3342338, 19, 131083, 3342338, 20, 12, 3342338, 18, 65548, 3342338, 19, 131084, 3342338, 20, 13, 3342338, 18, 65549, 3342338, 19, 131085, 3342338, 20, 14, 3342338, 18, 65550, 3342338, 19, 131086, 3342338, 20, 15, 3342338, 18, 65551, 3342338, 19, 131087, 3342338, 20, 16, 3342338, 18, 65552, 3342338, 19, 131088, 3342338, 20, 17, 3342338, 18, 65553, 3342338, 19, 131089, 3342338, 20, 18, 3342338, 18, 65554, 3342338, 19, 131090, 3342338, 20, 19, 3342338, 18, 65555, 3342338, 19, 131091, 3342338, 20, 20, 3342338, 18, 65556, 3342338, 19, 131092, 3342338, 20, 21, 3342338, 18, 65557, 3342338, 19, 131093, 3342338, 20, 22, 3342338, 18, 65558, 3342338, 19, 131094, 3342338, 20, 23, 3342338, 18, 65559, 3342338, 19, 131095, 3342338, 20, 24, 3342338, 18, 65560, 3342338, 19, 131096, 3342338, 20, 25, 3342338, 18, 65561, 3342338, 19, 131097, 3342338, 20, 26, 3342338, 18, 65562, 3342338, 19, 131098, 3342338, 20, 27, 3342338, 18, 65563, 3342338, 19, 131099, 3342338, 20, 28, 3342338, 18, 65564, 3342338, 19, 131100, 3342338, 20, 29, 3342338, 18, 65565, 3342338, 19, 131101, 3342338, 20, 30, 3342338, 18, 65566, 3342338, 19, 131102, 3342338, 20, 31, 3342338, 18, 65567, 3342338, 19, 131103, 3342338, 20, 32, 3342338, 18, 65568, 3342338, 19, 131104, 3342338, 20, 33, 3342338, 18, 65569, 3342338, 19, 131105, 3342338, 20, 34, 3342338, 18, 65570, 3342338, 19, 131106, 3342338, 20, 35, 3342338, 18, 65571, 3342338, 19, 131107, 3342338, 20, 36, 3342338, 18, 65572, 3342338, 19, 131108, 3342338, 20, 37, 3342338, 18, 65573, 3342338, 19, 131109, 3342338, 20, 38, 3342338, 18, 65574, 3342338, 19, 131110, 3342338, 20, 39, 3342338, 18, 65575, 3342338, 19, 131111, 3342338, 20, 40, 3342338, 18, 65576, 3342338, 19, 131112, 3342338, 20, 41, 3342338, 18, 65577, 3342338, 19, 131113, 3342338, 20, 42, 3342338, 18, 65578, 3342338, 19, 131114, 3342338, 20)
+layer_1/name = "Level 1 (Walls)"
+layer_1/enabled = true
+layer_1/modulate = Color(1, 1, 1, 1)
+layer_1/y_sort_enabled = true
+layer_1/y_sort_origin = 0
+layer_1/z_index = 0
+layer_1/tile_data = PackedInt32Array()
+layer_2/name = "Level 2 (Y Sort)"
+layer_2/enabled = true
+layer_2/modulate = Color(1, 1, 1, 1)
+layer_2/y_sort_enabled = true
+layer_2/y_sort_origin = 0
+layer_2/z_index = 0
+layer_2/tile_data = PackedInt32Array()
+layer_3/name = "Level 3(Extra)"
+layer_3/enabled = true
+layer_3/modulate = Color(1, 1, 1, 1)
+layer_3/y_sort_enabled = false
+layer_3/y_sort_origin = 0
+layer_3/z_index = 0
+layer_3/tile_data = PackedInt32Array()
+
+[node name="player" parent="." instance=ExtResource("6_dvw56")]
+position = Vector2(573, 329)
+
+[node name="collisions" type="StaticBody2D" parent="."]
+
+[node name="cliffside_exit_point" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cliffside_exit_point"]
+position = Vector2(96, 25)
+shape = SubResource("RectangleShape2D_wt6oy")
+debug_color = Color(0.67451, 0.505882, 0, 0.419608)
+
+[connection signal="body_entered" from="cliffside_exit_point" to="." method="_on_cliffside_exit_point_body_entered"]
+[connection signal="body_exited" from="cliffside_exit_point" to="." method="_on_cliffside_exit_point_body_exited"]

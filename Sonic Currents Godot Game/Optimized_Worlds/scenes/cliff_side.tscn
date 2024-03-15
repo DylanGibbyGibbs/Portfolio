@@ -1,6 +1,6 @@
 [gd_scene load_steps=14 format=3 uid="uid://bo4i1t60osxd3"]
 
-[ext_resource type="Script" path="res://scenes/cliff_side.gd" id="1_4jyaa"]
+[ext_resource type="Script" path="res://scripts/cliff_side.gd" id="1_oompg"]
 [ext_resource type="Texture2D" uid="uid://cytw73g8q5erg" path="res://art/Interiors/Items/6_Music_and_sport_32x32.png" id="2_4wlg5"]
 [ext_resource type="Texture2D" uid="uid://cmw5ynyn85cl7" path="res://art/Interiors/Rooms/Room_Builder_Floors_32x32.png" id="3_n0m2j"]
 [ext_resource type="Texture2D" uid="uid://cil8eogfle07u" path="res://art/Interiors/Rooms/Room_Builder_3d_walls_32x32.png" id="4_sf2k4"]
@@ -3224,7 +3224,7 @@ size = Vector2(63.75, 45.75)
 
 [node name="cliff_side" type="Node2D"]
 y_sort_enabled = true
-script = ExtResource("1_4jyaa")
+script = ExtResource("1_oompg")
 
 [node name="TileMap" type="TileMap" parent="."]
 y_sort_enabled = true

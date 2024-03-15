@@ -133,10 +133,16 @@ func current_camera():
 	if global.current_scene == "world":
 		$world_camera.enabled = true
 		$cliff_side_camera.enabled = false
+		$overworld_camera.enabled = false
 	elif global.current_scene == "cliff_side":
 		$cliff_side_camera.enabled = true
 		$world_camera.enabled = false
-		
+		$overworld_camera.enabled = false
+	elif global.current_scene == "overworld":
+		$overworld_camera.enabled = true
+		$world_camera.enabled = false
+		$cliff_side_camera.enabled = false
+	
 
 func _on_deal_attack_timer_timeout():
 	$deal_attack_timer.stop()
