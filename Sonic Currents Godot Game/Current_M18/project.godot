@@ -20,6 +20,10 @@ boot_splash/size/borderless=false
 
 Global="*res://scripts/global.gd"
 
+[display]
+
+window/stretch/scale=2.0
+
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
